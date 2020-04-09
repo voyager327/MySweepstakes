@@ -8,7 +8,7 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
-         
+        
         public static int ContestantNumber = 0; 
         public static string FirstName()
         {
@@ -33,11 +33,11 @@ namespace Sweepstakes
             Console.WriteLine("Your registration number is " + ContestantNumber);
             return ContestantNumber;
         }
-
-
-       
-            
-        
+        public static string ChooseManager()
+        {
+            Console.WriteLine("Please Choose Sweepstakes manager type: Stack or Queue ");
+            return Console.ReadLine();
+        }
     }
 
 }

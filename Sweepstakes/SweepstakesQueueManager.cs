@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesQueueManager
+    public class SweepstakesQueueManager : ISweepstakesManager
     {
+        //create a SweepstakesQueueManager class that uses the Queue data structure as an underlying structure.
+        
+        Queue<Sweepstakes> sweepstakeQueue = new Queue<Sweepstakes>();
+
+        public Sweepstakes GetSweepstakes()
+        {
+            //Retrieving item using Dequeue
+            Console.WriteLine("Remove Sweepstake from Queue");
+            return sweepstakeQueue.Dequeue();
+        }
+
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            //Adding item using Enqueue
+            
+            sweepstakeQueue.Enqueue(sweepstakes);
+        }
+
     }
 }
